@@ -1,16 +1,12 @@
 
-############## ORDER AGENT
+############## OHA
 
 prefix ajan: <http://www.ajan.de/ajan-ns#>
-prefix mosaik: <http://dfki.de/mosaik#>
 prefix stigld: <http://dfki.de/stigld#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix mosaik: <http://dfki.de/mosaik#>
 
-mosaik:self stigld:locatedAt <http://192.168.2.109:8080/orders/Order2> ;
-			mosaik:simulation "http://192.168.2.109:8080/" .
-
+ajan:self stigld:locatedAt <http://localhost:8190/orders> ;
+	mosaik:simulation  <http://localhost:8190/> .
 
 
 ############# JSA
@@ -42,18 +38,4 @@ ajan:self stigld:locatedAt "http://localhost:8190/workstations"^^xsd:string ;
 			mosaik:simulation "http://localhost:8190/" ;
 			mosaik:myProductkind <http://localhost:8190/productkinds/mainboard> ;
 			schema:supply <http://localhost:8190/productkinds/cpu>, <http://localhost:8190/productkinds/rammodule> ;
-			mosaik:myOrder <http://192.168.2.109:8080/orders/Order2> .
-
-
-############# PRODUCTION AGENT
-
-prefix ajan: <http://www.ajan.de/ajan-ns#>
-prefix mosaik: <http://dfki.de/mosaik#>
-prefix stigld: <http://dfki.de/stigld#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-
-mosaik:self stigld:locatedAt "http://192.168.2.109:8080/workstations/"^^xsd:string ;
-			mosaik:simulation "http://192.168.2.109:8080/" ;			
 			mosaik:myOrder <http://192.168.2.109:8080/orders/Order2> .
