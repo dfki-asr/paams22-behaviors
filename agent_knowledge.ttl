@@ -28,13 +28,22 @@ ajan:self stigld:locatedAt "http://localhost:8190/blueprints"^^xsd:string ;
 			mosaik:myOrder <http://192.168.2.109:8080/orders/Order2> .
 
 
-############### SHOPFLOOR MARKER AGENT
-<http://dfki.de/mosaik#self> a <http://dfki.de/mosaik#MarkerKnowledge>;
-  <http://dfki.de/mosaik#myOrder> <http://192.168.2.109:8080/orders/Order2>;
-  <http://dfki.de/mosaik#simulation> "http://192.168.2.109:8080/";
-  <http://dfki.de/mosaik#myProductkind> <http://localhost:8080/productKinds/AssembledParts>;
-  <http://dfki.de/mosaik#mySkill> <http://localhost:8080/skills/Assembling>;
-  <http://dfki.de/stigld#locatedAt> "http://192.168.2.109:8080/workstations/" .
+############### JEA
+
+prefix ajan: <http://www.ajan.de/ajan-ns#>
+prefix mosaik: <http://dfki.de/mosaik#>
+prefix stigld: <http://dfki.de/stigld#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix schema: <https://schema.org/>
+
+ajan:self stigld:locatedAt "http://localhost:8190/workstations"^^xsd:string ;
+			mosaik:simulation "http://localhost:8190/" ;
+			mosaik:myProductkind <http://localhost:8190/productkinds/mainboard> ;
+			schema:supply <http://localhost:8190/productkinds/cpu>, <http://localhost:8190/productkinds/rammodule> ;
+			mosaik:myOrder <http://192.168.2.109:8080/orders/Order2> .
+
 
 ############# PRODUCTION AGENT
 
