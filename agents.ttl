@@ -15,3 +15,13 @@
   a <http://www.ajan.de/ajan-ns#AgentTemplate>;
   rdfs:label "JSA";
   <http://www.ajan.de/ajan-ns#initialBehavior> <http://localhost:8090/rdf4j/repositories/agents#IB_ea4410d3-7200-4dc0-977f-0aeb2935c919> .
+
+<http://localhost:8090/rdf4j/repositories/agents#AG_95f03713-c9c2-45f9-8add-c726a26dc85b>
+  a <http://www.ajan.de/ajan-ns#AgentTemplate>;
+  rdfs:label "JEA";
+  <http://www.ajan.de/ajan-ns#initialBehavior> <http://localhost:8090/rdf4j/repositories/agents#IB_acb000f5-8b81-4abb-a7a0-a4a24474db2c> .
+
+<http://localhost:8090/rdf4j/repositories/agents#IB_acb000f5-8b81-4abb-a7a0-a4a24474db2c>
+  a <http://www.ajan.de/ajan-ns#InitialBehavior>;
+  rdfs:label "JEA_InitialBehavior";
+  <http://www.ajan.de/ajan-ns#bt> <http://localhost:8090/rdf4j/repositories/behaviors#8d6eb88f-24a5-463a-b2e8-e59c9b179361> .
